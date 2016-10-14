@@ -1,6 +1,6 @@
 #!/bin/bash
 
-APPID=de.appwerft.airlino
+APPID=de.appwerft.materialrangebar
 VERSION=1.0.0
 
 #cp android/assets/* iphone/
