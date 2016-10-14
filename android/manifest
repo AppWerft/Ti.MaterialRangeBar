@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 2
+architectures: armeabi armeabi-v7a x86
+description: materialrangebar
+author: Rainer Knöterich
+license: Specify your license
+copyright: Copyright (c) 2016 by 
+
+# these should not be edited
+name: materialrangebar
+moduleid: de.appwerft.materialrangebar
+guid: 1ea0d499-936c-4ee8-b016-6895edb12156
+platform: android
+minsdk: 5.5.1.GA
