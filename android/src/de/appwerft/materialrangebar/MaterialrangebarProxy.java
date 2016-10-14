@@ -12,7 +12,11 @@ import java.util.HashMap;
 
 import org.appcelerator.kroll.KrollDict;
 import org.appcelerator.kroll.annotations.Kroll;
+import org.appcelerator.titanium.TiC;
+import org.appcelerator.titanium.TiDimension;
 import org.appcelerator.titanium.proxy.TiViewProxy;
+import org.appcelerator.titanium.TiDimension;
+import org.appcelerator.titanium.util.TiConvert;
 import org.appcelerator.titanium.view.TiUIView;
 
 import android.app.Activity;
@@ -22,7 +26,7 @@ import android.graphics.Color;
 @Kroll.proxy(creatableInModule = MaterialrangebarModule.class)
 public class MaterialrangebarProxy extends TiViewProxy {
 	private static final String LCAT = "RangeBar 📐";
-	private HashMap<String, Integer> colors = new HashMap<String, Integer>();
+	private ProxyParameters parameters;
 
 	public MaterialrangebarProxy() {
 		super();
@@ -40,14 +44,7 @@ public class MaterialrangebarProxy extends TiViewProxy {
 	@Override
 	public void handleCreationDict(KrollDict options) {
 		super.handleCreationDict(options);
-		String[] colorStrings = { "barColor", "connectingLineColor",
-				"pinColor", "textColor", "tickColor", "selectorColor" };
-		for (int i = 0; i < colorStrings.length; i++) {
-			String color = colorStrings[i];
-			if (options.containsKeyAndNotNull(color)) {
-				colors.put(color, Color.parseColor(options.getString(color)));
-			}
-		}
+		new ProxyParameters(options);
 	}
 
 	// Methods
