@@ -9,4 +9,4 @@ It is similar to an enhanced SeekBar widget, though it doesn't make use of the S
 
 Supported on API Level 12 and above for animations.
 
-<img src="https://github.com/oli107/material-range-bar/raw/master/Screenshots/pin%20expand.gif" width=480 / >
+<img src="https://github.com/oli107/material-range-bar/raw/master/Screenshots/pin%20expand.gif" width=380 / >
